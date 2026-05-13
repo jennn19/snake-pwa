@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.game-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#score, #highScore {
+    color: #00ff88;
+}
+
+#gameCanvas {
+    border: 4px solid #00ff88;
+    border-radius: 10px;
+    background: #0a0a15;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+    display: block;
+    margin: 0 auto;
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+    color: #1a1a2e;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 5px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.instructions {
+    margin: 15px 0;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.touch-controls {
+    margin-top: 20px;
+}
+
+.touch-controls button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+.btn-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    #gameCanvas { width: 300px; height: 300px; }
+    .touch-controls button { width: 50px; height: 50px; font-size: 1.2rem; }
+}
